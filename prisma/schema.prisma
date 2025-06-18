@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" 
+  url      = env("DATABASE_URL")
+}
+
+enum UserType {
+  PARTICULIER
+  ENTREPRISE
+}
+
+enum Profile {
+  DEVELOPPEUR
+  DESIGNER
+  AUTRE
+}
+
+model User {
+  id              String      @id @default(cuid())
+  email           String      @unique
+  password        String
+  type            UserType
+
+  // Champs pour Particulier
+  nom             String?
+  prenom          String?
+  dateNaissance   DateTime?
+  telephone       String?
+  adresse         String?
+  ville           String?
+  pays            String?
+  niveauEtude     String?
+  profil          Profile?
+
+  // Champs pour Entreprise
+  registreCommerce String?    @unique
+  nomEntreprise    String?
+  telephone2       String?
+
+  cvs             Cv[]       // Relation : un utilisateur peut avoir plusieurs CVs
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model Cv {
+  id            String      @id @default(cuid())
+  titre         String
+  description   String
+  fichierUrl    String?     // Pour stocker le lien vers un fichier PDF ou DOC
+  userId        String
+  user          User        @relation(fields: [userId], references: [id])
+  formations    Formation[]
+
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
+
+model Formation {
+  id            String      @id @default(cuid())
+  nom           String
+  institution   String
+  debut         DateTime
+  fin           DateTime
+  description   String?
+  cvId          String
+  cv            Cv          @relation(fields: [cvId], references: [id])
+
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
