@@ -68,7 +68,7 @@ const InscriptionPage = () => {
                 <input name="registreCommerce" required placeholder="RC123456789" className="w-full border border-gray-300 px-3 py-2 rounded-md" />
               </div>
               <div>
-                <label className="block mb-1 text-sm font-bold text-gray-700">Nom de L'Entreprise *</label>
+                <label className="block mb-1 text-sm font-bold text-gray-700">Nom de L&apos;Entreprise *</label>
                 <input name="nomEntreprise" required placeholder="Nom de votre entreprise" className="w-full border border-gray-300 px-3 py-2 rounded-md" />
               </div>
             </section>
@@ -104,7 +104,7 @@ const InscriptionPage = () => {
 
             {/* Adresse */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900 border-b border-gray-300 pb-2">Adresse de L'Entreprise</h3>
+              <h3 className="text-lg font-semibold text-gray-900 border-b border-gray-300 pb-2">Adresse de L&apos;Entreprise</h3>
               <div>
                 <label className="block mb-1 text-sm font-bold text-gray-700">Adresse</label>
                 <input name="adresse" placeholder="123 rue de la Paix" className="w-full border border-gray-300 px-3 py-2 rounded-md" />
