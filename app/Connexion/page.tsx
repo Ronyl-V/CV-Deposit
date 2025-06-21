@@ -27,11 +27,13 @@ const Connexion = () => {
       let data;
       try {
         data = await res.json();
-      } catch (e) {
+      }catch (e) {
         alert("La réponse du serveur n'est pas un JSON valide");
+        console.error("Erreur JSON:", e); // ← utilisation de `e` ici
         console.error("Réponse brute :", await res.text());
         return;
       }
+      
 
       if (res.ok && data.success) {
         alert(`Connexion réussie (${userType})`);
