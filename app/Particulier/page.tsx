@@ -128,7 +128,7 @@ const InscriptionPage = () => {
               <h3 className="text-lg font-semibold text-gray-900 border-b border-gray-300 pb-2">Informations professionnelles</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block mb-1 text-sm font-bold text-gray-700">Niveau d'étude</label>
+                  <label className="block mb-1 text-sm font-bold text-gray-700">Niveau d&apos;étude</label>
                   <select name="niveauEtude" className="w-full border border-gray-300 px-3 py-2 rounded-md">
                     <option value="">Sélectionnez votre niveau</option>
                     <option value="bac">Baccalauréat</option>
