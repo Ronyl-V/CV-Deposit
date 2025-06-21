@@ -18,7 +18,7 @@ const NavBar = () => {
             Se connecter
           </Link>
           <Link href="/" className="cursor-pointer text-white font-bold rounded-md py-2 px-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-            S'inscrire
+          S&apos;inscrire
           </Link>
         </div>
       </div>
