@@ -6,9 +6,9 @@ import NavInscription from "../Components/NavInscription";
 const Connexion = () => {
   const [activeTab, setActiveTab] = useState<"particulier" | "entreprise">("particulier");
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>, userType: string) => {
-    event.preventDefault();
-    const form = event.currentTarget;
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>, userType: string) => {
+    e.preventDefault();
+    const form = e.currentTarget;
     const email = (form.elements.namedItem("email") as HTMLInputElement).value;
     const password = (form.elements.namedItem("password") as HTMLInputElement).value;
 
@@ -120,7 +120,7 @@ const Connexion = () => {
                   href="/inscription-particulier"
                   className="text-blue-600 underline"
                 >
-                  S'inscrire
+                  S&apos;inscrire
                 </a>
               </p>
             </form>
@@ -164,7 +164,7 @@ const Connexion = () => {
                   href="/inscription-entreprise"
                   className="text-indigo-600 underline"
                 >
-                  S'inscrire
+                  S&apos;inscrire
                 </a>
               </p>
             </form>
