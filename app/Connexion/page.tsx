@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import { FileText, ArrowLeft, User, Building2 } from "lucide-react";
+import { User, Building2 } from "lucide-react";
 import NavInscription from "../Components/NavInscription";
 
 const Connexion = () => {
